@@ -1,0 +1,59 @@
+<h1 *ngIf="enemy">You vs {{enemy.knownAs}}</h1>
+<h1 *ngIf="playVsPlayerService.cell[9] === 5" style="color:green">You won</h1>
+<h1 *ngIf="playVsPlayerService.cell[9] === 4" style="color:red">{{enemy.knownAs}} won</h1>
+<h1 *ngIf="playVsPlayerService.cell[9] === 3" style="color:yellow">Tie</h1>
+<table style="margin-top: 100px">
+  <tr>
+    <td>
+      <button class="tictac" (click)="move(0)" *ngIf="playVsPlayerService.cell[0] === 0"></button>
+      <p *ngIf="playVsPlayerService.cell[0] === 1"> X </p>
+      <p *ngIf="playVsPlayerService.cell[0] === 2"> O </p>
+    </td>
+    <td class="vert">
+      <button class="tictac" (click)="move(1)" *ngIf="playVsPlayerService.cell[1] === 0"></button>
+      <p *ngIf="playVsPlayerService.cell[1] === 1"> X </p>
+      <p *ngIf="playVsPlayerService.cell[1] === 2"> O </p>
+    </td>
+    <td>
+      <button class="tictac" (click)="move(2)" *ngIf="playVsPlayerService.cell[2] === 0"></button>
+      <p *ngIf="playVsPlayerService.cell[2] === 1"> X </p>
+      <p *ngIf="playVsPlayerService.cell[2] === 2"> O </p>
+    </td>
+  </tr>
+  <tr>
+    <td class="hori">
+      <button class="tictac" (click)="move(3)" *ngIf="playVsPlayerService.cell[3] === 0"></button>
+      <p *ngIf="playVsPlayerService.cell[3] === 1"> X </p>
+      <p *ngIf="playVsPlayerService.cell[3] === 2"> O </p>
+    </td>
+    <td class="vert hori">
+      <button class="tictac" (click)="move(4)" *ngIf="playVsPlayerService.cell[4] === 0"></button>
+      <p *ngIf="playVsPlayerService.cell[4] === 1"> X </p>
+      <p *ngIf="playVsPlayerService.cell[4] === 2"> O </p>
+    </td>
+    <td class="hori">
+      <button class="tictac" (click)="move(5)" *ngIf="playVsPlayerService.cell[5] === 0"></button>
+      <p *ngIf="playVsPlayerService.cell[5] === 1"> X </p>
+      <p *ngIf="playVsPlayerService.cell[5] === 2"> O </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button class="tictac" (click)="move(6)" *ngIf="playVsPlayerService.cell[6] === 0"></button>
+      <p *ngIf="playVsPlayerService.cell[6] === 1"> X </p>
+      <p *ngIf="playVsPlayerService.cell[6] === 2"> O </p>
+    </td>
+    <td class="vert">
+      <button class="tictac" (click)="move(7)" *ngIf="playVsPlayerService.cell[7] === 0"></button>
+      <p *ngIf="playVsPlayerService.cell[7] === 1"> X </p>
+      <p *ngIf="playVsPlayerService.cell[7] === 2"> O </p>
+    </td>
+    <td>
+      <button class="tictac" (click)="move(8)" *ngIf="playVsPlayerService.cell[8] === 0"></button>
+      <p *ngIf="playVsPlayerService.cell[8] === 1"> X </p>
+      <p *ngIf="playVsPlayerService.cell[8] === 2"> O </p>
+    </td>
+  </tr>
+</table>
+
+<button class="play btn btn-success mr-2" (click)="playAgain()">Restart</button>

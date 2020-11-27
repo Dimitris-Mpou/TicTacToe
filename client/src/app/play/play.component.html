@@ -1,0 +1,23 @@
+<div>
+  <ng-container *ngIf="(accountService.CurrentUser$ | async) === null">
+    <h2 class="text-center text-primary">Login or Register to play against other players</h2>
+    <hr>
+    <div class="form-group text-center">
+      <button class="btn btn-success mr-2" routerLink="/">Register</button>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="accountService.CurrentUser$ | async">
+    <h2 class="text-center text-primary">Choose Player</h2>
+    <hr>
+    <div class="form-group text-center">
+      <button class="btn btn-success mr-2" routerLink="/members">See all players</button>
+    </div>
+  </ng-container>
+
+  <h2 class="text-center text-primary" style="margin-top: 100px">Play against CPU</h2>
+  <hr>
+  <div class="form-group text-center">
+    <button class="btn btn-success mr-2" routerLink="/vscpu">Play</button>
+  </div>
+</div>
