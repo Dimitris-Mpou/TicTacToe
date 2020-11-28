@@ -1,0 +1,9 @@
+TicTacToe
+
+Its an application where users can play TicTacToe. They can
+register accounts and login to see other players and their
+total wins. Everyone can play against CPU.
+
+I use entity framework to communicate with the DB and JWT
+tokens to authenticate a loggen in user. When the API starts
+execution seeds data from SeedData.json.
